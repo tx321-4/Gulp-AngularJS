@@ -10,8 +10,32 @@
     right:0;
     .fs(0);
     li{
-        .fs(20);
+        .fs(18);
         width:33.33%;
         color:@muteColor;
+        i{
+            background-size: 74%;
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+        &.select{
+            background:@highlightBgColor;
+            color:@highlightColor;
+        }
+    }
+    .icon-document {
+        background-image: url('../image/document.png');
+        .w(25);
+        .h(21);
+    }
+    .icon-search {
+        background-image: url('../image/search.png');
+        .w(24);
+        .h(24);
+    }
+    .icon-my {
+        background-image: url('../image/my.png');
+        .w(23);
+        .h(25);
     }
 }
