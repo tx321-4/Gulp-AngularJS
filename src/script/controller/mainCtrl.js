@@ -1,20 +1,7 @@
 'use strict';
-angular.module('app').controller('mainCtrl',['$scope', function($scope){
-    $scope.list= [{
-        id: '1',
-        name: '销售',
-        companyName: '千度',
-        image: 'image/company-3.png',
-        city: '上海',
-        industry: '互联网',
-        time: '2019-06-01 11:05'
-    },{
-        id: '2',
-        name: 'WEB前端',
-        companyName: '慕课网',
-        image: 'image/company-1.png',
-        city: '背景',
-        industry: '互联网',
-        time: '2019-06-01 01:05'
-    }];
+angular.module('app').controller('mainCtrl',['$http','$scope', function($http, $scope){
+    $http.get('/data/positionList.json').then(function(resp){
+        $scope.list = resp.data;
+        
+    })
 }]);
